@@ -4,7 +4,6 @@ class Building{
       throw new Error('class is abstract and cannot be instanciated');
     }
     this._sqft = sqft
-   }
   }
 
   get sqft() {
