@@ -11,7 +11,7 @@ class Building{
   }
 
   set sqft(value) {
-    if (typeof sqft !== "number") {
+    if (typeof value !== "number") {
       throw new Error('value must be a number')
     } else {
       this._sqft = value;
