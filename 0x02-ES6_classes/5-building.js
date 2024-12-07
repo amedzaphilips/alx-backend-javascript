@@ -1,16 +1,18 @@
-class Building() {
+class Building{
   constructor(sqft) {
     if (this.constructor === Building){
-      throw new Error('class is abstract and cannot be instanciated')
+      throw new Error('class is abstract and cannot be instanciated');
+
     this._sqft = sqft
+   }
   }
 
   get sqft() {
-    return this_sqft;
+    return this._sqft;
   }
 
   set sqft(value) {
-    if (typeof sqft !== number) {
+    if (typeof sqft !== "number") {
       throw new Error('value must be a number')
     } else {
       this._sqft = value;
