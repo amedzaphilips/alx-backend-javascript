@@ -18,6 +18,7 @@ export default class ALXClass {
 
   set location(value) {
     this._location = value;
+  }
 
   valueOf() {
     return this._size;
