@@ -1,9 +1,13 @@
-class Building{
+export default class Building {
   constructor(sqft) {
-    if (this.constructor === Building){
-      throw new Error('class is abstract and cannot be instanciated');
+    this.sqft = sqft;
+    if (this.constructor !== Building) {
+      if (typeof this.evacuationWarningMessage !== 'function') {
+        throw new Error(
+          'Class extending Building must override evacuationWarningMessage',
+        );
+      }
     }
-    this._sqft = sqft
   }
 
   get sqft() {
@@ -11,15 +15,6 @@ class Building{
   }
 
   set sqft(value) {
-    if (typeof value !== "number") {
-      throw new Error('value must be a number')
-    } else {
-      this._sqft = value;
-    }
+    this._sqft = value;
   }
-
-  evacuationWarningMessage() {
-  throw new Error('Class extending Building must override evacuationWarningMessage')
-  }
-
 }
