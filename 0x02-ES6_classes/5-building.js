@@ -1,5 +1,3 @@
-import Building from '5-building.js'
-
 class Building() {
   constructor(sqft) {
     if (this.constructor === Building){
